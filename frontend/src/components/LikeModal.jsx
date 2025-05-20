@@ -21,6 +21,7 @@ const LikeModal = ({ isOpen, onClose, id }) => {
   }
 
   useEffect(() => {
+    console.log("like modal");
     fetchLikes();
   }, [id]);
   return (
@@ -44,12 +45,7 @@ const LikeModal = ({ isOpen, onClose, id }) => {
                     key={i}
                     onClick={() => setShow(false)}
                   >
-                    {i + 1}{" "}
-                    <img
-                      className="w-8 h-8 rounded-full"
-                      src={e.profilePic.url}
-                      alt=""
-                    />
+                    {i + 1} <img className="w-8 h-8 rounded-full" src={e.profilePic.url} alt="" />
                     {e.name}
                   </Link>
                 ))
